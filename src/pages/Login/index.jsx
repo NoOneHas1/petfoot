@@ -1,10 +1,8 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState } from 'react';
+import './index.css';
 
-function App() {
-  const [email, setEmail] = useState('');
+const Login = () => {
+const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   const handleSubmit = (e) => {
@@ -44,4 +42,4 @@ function App() {
   );
 }
 
-export default App
+export default Login
