@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './index.css';
+import loginApi from '../../api/login';
 
 const Login = () => {
 const [email, setEmail] = useState('');
@@ -7,9 +8,15 @@ const [email, setEmail] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Correo:', email);
-    console.log('Contraseña:', password);
-    alert('Inicio de sesión simulado');
+
+    loginApi(email, password)
+      .then((response) => {
+        alert('Inicio de sesión exitoso');
+        console.log('Respuesta del servidor:', response);
+      })
+      .catch((error) => {
+        console.error('Error al iniciar sesión:', error);
+      });
   };
 
   return (
@@ -18,7 +25,7 @@ const [email, setEmail] = useState('');
 
       <div className="login-container">
         <h2>Iniciar sesión</h2>
-        <form onSubmit={handleSubmit} className="login-form">
+        <form className="login-form">
           <input
             type="email"
             placeholder="Correo electrónico"
@@ -35,7 +42,7 @@ const [email, setEmail] = useState('');
             required
             className="login-input"
           />
-          <button type="submit" className="login-button">Entrar</button>
+          <button type="submit" className="login-button" onClick={handleSubmit}>Entrar</button>
         </form>
       </div>
     </>
