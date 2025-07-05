@@ -1,44 +1,55 @@
 import React, { useState } from 'react';
 import './index.css';
+import logo from '../../assets/images/logo.png';
 
 const Login = () => {
-const [email, setEmail] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Correo:', email);
-    console.log('Contraseña:', password);
     alert('Inicio de sesión simulado');
   };
 
   return (
-    <>
-      <h1>Bienvenido Usuario</h1>
-
-      <div className="login-container">
-        <h2>Iniciar sesión</h2>
+    <div className="login-main-container">
+      <div className="login-left-panel">
+        <img src={logo} alt="PetFoot" className="login-logo" />
+        <h2>Inicia sesión en PetFoot</h2>
         <form onSubmit={handleSubmit} className="login-form">
-          <input
-            type="email"
-            placeholder="Correo electrónico"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-            className="login-input"
-          />
-          <input
-            type="password"
-            placeholder="Contraseña"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-            className="login-input"
-          />
-          <button type="submit" className="login-button">Entrar</button>
+          <div className="input-icon-group">
+            <span className="icon email-icon" />
+            <input
+              type="email"
+              placeholder="Correo Electrónico"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+              className="login-input"
+            />
+          </div>
+          <div className="input-icon-group">
+            <span className="icon password-icon" />
+            <input
+              type="password"
+              placeholder="Contraseña"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+              className="login-input"
+            />
+          </div>
+          <button type="submit" className="login-button">Iniciar sesión</button>
+          <a href="#" className="forgot-password">¿Olvidaste tu contraseña?</a>
         </form>
       </div>
-    </>
+      <div className="login-right-panel">
+        <h2>Hola, Amigo!</h2>
+        <p>Ingresa tus datos y empieza ahora</p>
+        <button className="register-button">Registrarse</button>
+        <button className="vet-button">Soy veterinario</button>
+      </div>
+    </div>
   );
 }
 
