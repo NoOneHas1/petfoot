@@ -1,0 +1,157 @@
+/* Contenedor principal */
+.login-main-container {
+  display: flex;
+  width: 800px;
+  height: 480px;
+  margin: 40px auto;
+  box-shadow: 0 0 10px #b0b0b0;
+  border-radius: 8px;
+  overflow: hidden;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* Panel izquierdo */
+.login-left-panel {
+  background: #4a7bb7;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 30px;
+  color: #fff;
+}
+
+.login-left-panel h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+.login-left-panel p {
+  font-size: 1rem;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.login-button {
+  width: 160px;
+  padding: 10px 0;
+  border-radius: 20px;
+  border: 2px solid #fff;
+  background: transparent;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.login-button:hover {
+  background: #fff;
+  color: #4a7bb7;
+}
+
+/* Panel derecho */
+.login-right-panel {
+  background: #e6f2fa;
+  flex: 1;
+  color: #3a5d8c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 30px;
+}
+
+.login-right-panel h2 {
+  color: #3a5d8c;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.register-form {
+  width: 100%;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Inputs con íconos */
+.input-icon-group {
+  display: flex;
+  align-items: center;
+  background: #d2e6f3;
+  border-radius: 4px;
+  padding: 0 10px;
+  margin-bottom: 4px;
+}
+
+.input-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  display: inline-block;
+}
+
+/* Íconos SVG desde CDN */
+.user-icon {
+  background: url('https://cdn.jsdelivr.net/gh/feathericons/feather@4.28.0/icons/user.svg') no-repeat center/contain;
+}
+.phone-icon {
+  background: url('https://cdn.jsdelivr.net/gh/feathericons/feather@4.28.0/icons/phone.svg') no-repeat center/contain;
+}
+.location-icon {
+  background: url('https://cdn.jsdelivr.net/gh/feathericons/feather@4.28.0/icons/map-pin.svg') no-repeat center/contain;
+}
+.email-icon {
+  background: url('https://cdn.jsdelivr.net/gh/feathericons/feather@4.28.0/icons/mail.svg') no-repeat center/contain;
+}
+.password-icon {
+  background: url('https://cdn.jsdelivr.net/gh/feathericons/feather@4.28.0/icons/lock.svg') no-repeat center/contain;
+}
+
+/* Inputs */
+.login-input, .select-id {
+  border: none;
+  background: transparent;
+  outline: none;
+  padding: 10px 0;
+  width: 100%;
+  font-size: 1rem;
+  color: #3a5d8c;
+}
+
+.select-id {
+  max-width: 60px;
+  background: transparent;
+}
+
+/* Botón de registro */
+.register-button {
+  background: #3a5d8c;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 0;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.register-button:hover {
+  background: #27466b;
+}
