@@ -1,15 +1,17 @@
-import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import RegistroUsuario from './pages/Login/registro.usario/index1';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Login from './pages/Login/index.jsx';
+import RegistroUsuario from './pages/Login/registro.usario/index1.jsx';
 
-function App() {
+function AppRoutes() {
   return (
-    <BrowserRouter>
+    <Router>
       <Routes>
+        <Route path="/" element={<Login />} />
         <Route path="/registro" element={<RegistroUsuario />} />
+        
       </Routes>
-    </BrowserRouter>
+    </Router>
   );
 }
 
-export default App;
+export default AppRoutes;

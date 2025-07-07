@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom'; // 👈 Importar Link
 import './index.css';
 import logo from '../../assets/images/logo.png';
 
@@ -46,11 +47,16 @@ const Login = () => {
       <div className="login-right-panel">
         <h2>Hola, Amigo!</h2>
         <p>Ingresa tus datos y empieza ahora</p>
-        <button className="register-button">Registrarse</button>
+
+       
+        <Link to="/registro">
+          <button className="register-button">Registrarse</button>
+        </Link>
+
         <button className="vet-button">Soy veterinario</button>
       </div>
     </div>
   );
-}
+};
 
-export default Login
+export default Login;
